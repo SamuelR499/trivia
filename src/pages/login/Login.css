@@ -1,0 +1,123 @@
+.area-login {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  background-color: #181920;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 355px;
+  height: 450px;
+  padding: 35px;
+}
+
+.logo-area{
+  margin-bottom: 50px;
+}
+
+.logo-area h1 {
+  color: #cbd0f7;
+  font-weight: bold;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+}
+
+.login input {
+  margin-top: 10px;
+  background-color: hsl(220, 17%, 17%);
+  color: #cbd0f7;
+  padding-left: 10px;
+  border: none;
+  height: 45px;
+  outline: none;
+  border-radius: 8px;
+}
+
+input::placeholder{
+  color: #cbd0f7;
+  font-size: 14px;
+}
+
+.login button {
+  margin-top: 10px;
+}
+
+.login img {
+  width: 65px;
+  height: auto;
+}
+
+.button-form {
+  align-self: center;
+  appearance: none;
+  background-color: #000000;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  height: 35px;
+  font-family: 'Lato', sans-serif;
+  width:100%;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-top: 10px;
+  opacity: 1;
+  outline: 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-form:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #ff7272b6;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.button-form:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-form:after {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.button-form:disabled{
+  border: 1px solid #999999;
+  background-color: #929292;
+  color: #666666;
+}
+
+.login .btn-area {
+  margin-top: 50px;
+}

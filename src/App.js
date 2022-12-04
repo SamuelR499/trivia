@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Login from './pages/Login';
+import Login from './pages/login/Login';
 import Game from './pages/Game';
 import './App.css';
 import Setting from './pages/Setting';
