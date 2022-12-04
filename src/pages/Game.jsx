@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import '../App.css';
 import { exportCount } from '../actions';
 
+const CORRECT_ANSWER = 4;
 class Game extends React.Component {
   state = {
     questions: [{ incorrect_answers: [], category: '', question: [] }],
@@ -66,7 +67,7 @@ class Game extends React.Component {
       buttons[i].disabled = false;
     }
     this.timer();
-    if (index + 1 > +'4') {
+    if (index + 1 > CORRECT_ANSWER) {
       history.push('/feedback');
     }
   }
@@ -86,13 +87,13 @@ class Game extends React.Component {
 
   correctAnswer = (i) => {
     const { respondido, answersBtns } = this.state;
-    if (respondido && answersBtns[i].index === +'4') {
+    if (respondido && answersBtns[i].index === CORRECT_ANSWER) {
       return 'correctAnswer';
     }
     if (!respondido) {
       return '';
     }
-    if (respondido && answersBtns[i].index !== +'4') {
+    if (respondido && answersBtns[i].index !== CORRECT_ANSWER) {
       return 'incorrectAnswer';
     }
   };
@@ -133,7 +134,7 @@ class Game extends React.Component {
               <button
                 key={ e.index }
                 data-testid={
-                  e.index === +'4'
+                  e.index === CORRECT_ANSWER
                     ? 'correct-answer'
                     : `wrong-answer-${e.index}`
                 }

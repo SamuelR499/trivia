@@ -16,7 +16,7 @@ class Feedback extends React.Component {
     return (
       <div>
         <header>
-          <p data-testid="feedback-text">Feedback</p>
+          {/* <p data-testid="feedback-text">Feedback</p> */}
           <img
             src={ `https://www.gravatar.com/avatar/${email}` }
             alt="imagem de avatar"
